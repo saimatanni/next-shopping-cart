@@ -5,6 +5,8 @@ import Navbar from "./component/Navbar";
 import { cn } from "./lib/Utils";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "./component/Footer";
+import Layout from "./component/Layout";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,8 +27,13 @@ export default function RootLayout({
           inter.className
         )}
       >
+        <Layout>
+
+     
         <Navbar />
         {children}
+        <Footer/>
+        </Layout>
       </body>
     </html>
   );

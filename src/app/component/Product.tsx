@@ -15,14 +15,13 @@ const Product = ({ productList }: Items) => {
     <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-10">
       {productList.map((item) => (
         <div
-          key={item._id}
+          key={item?._id}
           className="relative bg-white group border-[1px] border-zinc-200 hover:border-zinc-500 duration-300 hover:shadow-xl overflow-hidden"
         >
-       
           <Link href={{ pathname: `/${item?._id}`, query: { _id: item?._id } }}>
             <Image
               alt="img"
-              src={item.image}
+              src={item?.image}
               height={500}
               width={500}
               className="relative bg-white group border-[1px] border-zinc-200 hover:border-zinc-500 duration-300 hover:shadow-xl overflow-hidden"
